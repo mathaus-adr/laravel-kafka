@@ -1,0 +1,32 @@
+{
+    "name": "mathaus-adr/laravel-kafka",
+    "description": "A package that implements a consumer and producer for Apache Kafka for using along with Laravel Projects",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MathausAdr\\LaravelKafka\\": "src/",
+            "MathausAdr\\LaravelKafka\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mathaus",
+            "email": "mathaus.adorno@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "orchestra/testbench": "8.x",
+        "phpunit/phpunit": "^10.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MathausAdr\\LaravelKafka\\KafkaServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "enqueue/rdkafka": "^0.10.19"
+    }
+}
